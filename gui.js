@@ -7,6 +7,7 @@ totalBoxes = gridSize * gridSize;
 
 let cell;
 
+
 function createGrid(gridSize, divBoxSize) {
   totalBoxes = gridSize * gridSize;
   let cellSize = divBoxSize / gridSize;
@@ -36,12 +37,31 @@ function monitorMouse() {
   const mPlacement = document.querySelectorAll('.cell');
   mPlacement.forEach(unit => {
     unit.addEventListener('mouseover', () => {
-      unit.classList.add('hover');
+      // unit.classList.add('hover');
+
+      unit.style.backgroundColor=randoRGB();
+      
+      
       console.log('hovered');
     })
   })
 }
 
+function randoRGB() {
+let randomR,randomG,randomB;
+
+  randomR=Math.floor((Math.random()*255));
+  randomG=Math.floor((Math.random()*255));
+  randomB=Math.floor((Math.random()*255));
+
+  randomRGB='rgb('+randomR+','+randomG+','+randomB+')';
+
+  return randomRGB;
+}
+
+function blackify() {
+
+}
 
 createGrid(gridSize, divBoxSize);
 monitorMouse();
@@ -57,7 +77,8 @@ clearPad.addEventListener('click', () => {
   const mPlacement = document.querySelectorAll('.cell');
 
   mPlacement.forEach(unit => {
-    unit.classList.remove('hover');
+    // unit.classList.remove('hover');
+    unit.style.backgroundColor='';
 
   })
   console.log('cleared pad');
@@ -77,24 +98,6 @@ function askForSize() {
   }
   return size;
 }
-
-// function createCustomGrid(size) {
-//   let containerSize, newCellSize;
-
-//   newCellSize=containerSize/size;
-
-//   //Apply this to each cell created
-//   //remove previous cells created
-
-//   const newCell=document.querySelectorAll('.cell');
-
-//   newCell.forEach((unitCell)=>{
-//     unitCell.
-
-//   })
-
-// }
-
 
 const sizeButton = document.querySelector('.custom');
 let customSize;

@@ -14,14 +14,14 @@ body{
 .cell {
     /* width: 20px;
     height: 20px; */
-    border: solid 1px black;
+    /* border: solid 1px black; */
 
     display: flex;
 
     box-sizing: border-box;
   }
   .container {
-    border: solid 3px #0000ff;
+    border: solid 3px rgb(0, 0, 102);
 
     width: 350px;
     height: 350px;
@@ -35,5 +35,5 @@ body{
   }
 
   .hover {
-    background-color: green;
+    /* background-color: green; */
   }
