@@ -16,9 +16,12 @@ body{
     height: 20px;
     border: solid 1px black;
 
+    display: flex;
+    
   }
   .container {
     border: solid 1px #0000ff;
+
     width: 350px;
     height: 350px;
     display: flex;
@@ -27,6 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     align-content:flex-start;
+
 
   }
 
