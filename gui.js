@@ -37,7 +37,7 @@ function monitorMouse() {
   const mPlacement = document.querySelectorAll('.cell');
   mPlacement.forEach(unit => {
     unit.addEventListener('mouseover', () => {
-      // unit.classList.add('hover');
+      unit.classList.add('hover');
 
       unit.style.backgroundColor=randoRGB();
       
@@ -58,10 +58,18 @@ let randomR,randomG,randomB;
 
   return randomRGB;
 }
+//NOT WORKING
+//------------------------------------------------------
+  const coloredCells=document.querySelectorAll('.hover');
 
-function blackify() {
-
-}
+  coloredCells.forEach(singleCell=>{
+    singleCell.addEventListener('mouseover',()=>{
+      //convert rgb into HSL
+      //reduce L by 10 percent
+      console.log('singleCell.style.backgroundColor');
+    })
+  });
+//------------------------------------------------------
 
 createGrid(gridSize, divBoxSize);
 monitorMouse();
