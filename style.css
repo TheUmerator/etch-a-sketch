@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body{
@@ -12,15 +12,16 @@ body{
   gap:5px;
 }
 .cell {
-    width: 20px;
-    height: 20px;
+    /* width: 20px;
+    height: 20px; */
     border: solid 1px black;
 
     display: flex;
-    
+
+    box-sizing: border-box;
   }
   .container {
-    border: solid 1px #0000ff;
+    border: solid 3px #0000ff;
 
     width: 350px;
     height: 350px;
@@ -30,7 +31,6 @@ body{
     justify-content: center;
     align-items: center;
     align-content:flex-start;
-
 
   }
 
